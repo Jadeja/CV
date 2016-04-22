@@ -1,0 +1,43 @@
+<!--SETTINGS-->
+
+ 
+  <!-- /panel   
+  
+  <a href="#dashboard" data-direction="reverse" data-role="button" class="ui-btn-left"> BACK</a><spa>&nbsp;</span>-->
+  <!--place your addition header - sections and footer here--> 
+  <!--remember to put in a h1 identifier so you know you have reached the dashboard screen-->
+  
+  <section id="header-personalInfo" data-role="content" data-theme="a" class="center custom-border page-identifier" style="height:35px;">
+  <a  href="#newdashboard" accesskey="B" data-icon="back" class="ui-btn-left ui-link ui-btn ui-icon-back ui-btn-icon-left ui-shadow ui-corner-all" data-role="button">Back</a>
+    <h3>Personal Info</h3>
+  </section>
+  <section class="smallForm" data-role="content" role="main">
+  <div id="wrapper">     
+    <!--Main Content in Center of Screen-->
+   <div data-role="content" class="ui-content">
+   <h2>Personal Information Form</h2>
+   <div data-role="popup" id="popupInfo" class="ui-content" data-theme="a" style="max-width:350px;">
+ <p>Please make sure that your email adreess is appropriate. Because 35% CVs get rejected because of inappropriate email address</p>
+</div>
+   		
+		<form id="personalInfoForm">
+		<input type="text" class="required" data-theme="a" id="email2" name="email" placeholder="Your Email Address" />     
+        <input type="text" class="required" data-theme="a" id="fname" name="fname" placeholder="Forenames"/>				
+		<input type="text" class="required" data-theme="a" id="lname" name="lname" placeholder="Surname"/>
+		<input type="text" class="required" data-theme="a" id="addln1" name="addln1" placeholder="Address Line 1"/>
+		<input type="text" class="required" data-theme="a" id="addln2" name="addln2" placeholder="Address Line 2"/>
+		<input type="text" class="required" data-theme="a" id="town" name="town" placeholder="Town"/>
+		<input type="text" class="required" data-theme="a" id="county" name="county" placeholder="County"/>
+		<input type="text" class="required" data-theme="a" id="country" name="country" placeholder="Country"/>
+		<input type="text" class="required" data-theme="a" id="postcode" name="postcode" placeholder="Post Code"/>
+		<input type="text" class="required" data-theme="a" id="mobile" name="mobile" placeholder="Mobile Number"/>
+		<input type="text" class="required" data-theme="a" id="tel" name="tel" placeholder="Telephone Number"/>
+		<button>Save and Continue</button>		
+		<span class="msg"> </span>
+		</form>
+    </div>	
+	</div>
+   </section>
+   <script src="controllers/class.controller.personalInfo.js"></script>
+<!-- /close page --> 
+

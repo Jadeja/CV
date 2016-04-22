@@ -1,0 +1,86 @@
+<!--SETTINGS-->
+
+  <!-- /panel   
+  
+  <a href="#dashboard" data-direction="reverse" data-role="button" class="ui-btn-left"> BACK</a><spa>&nbsp;</span>-->
+  <!--place your addition header - sections and footer here--> 
+  <!--remember to put in a h1 identifier so you know you have reached the dashboard screen-->
+  
+  <section id="header-education" data-role="content" data-theme="a" class="center custom-border page-identifier" style="height:35px;">
+  <a  data-icon="back" accesskey="B" href="#newdashboard" class="backButton ui-btn-left ui-link ui-btn ui-icon-back ui-btn-icon-left ui-shadow ui-corner-all" data-role="button">Back</a>
+  
+    <h3>Education/Qualification</h3>
+  </section>
+  <section data-role="content" role="main">
+  <div class="container_16" data-theme="a">
+  	<div class="grid_4" data-theme="a">
+        <div class="gridMarginsLeft">
+         <div class="light-grey">
+			<div data-role="collapsibleset" data-theme="a" data-content-theme="b">
+            <div data-role="collapsible" data-theme="a" data-collapsed="false"><h2>Examples</h2>
+            <ul data-role="listview" id="exampleEducation" data-theme="a" data-divider-theme="a">
+            </ul>
+            </div>
+			</div>
+            </div>
+             <div class="light-grey">
+			<div data-role="collapsibleset" data-theme="a" data-content-theme="b">
+            <div data-role="collapsible" data-theme="a" data-collapsed="false"><h2>Tips and Advices</h2>	
+            <ul data-role="listview" id="advisesEducation" data-theme="a" data-divider-theme="a">	
+            </ul>
+            </div>		
+			</div>
+            </div>
+      </div>
+    </div>
+      <div class="grid_8" data-theme="a">
+        <div class="gridMarginsLeft">
+          <div class="light-grey">
+            <div class="header">
+              <h2 class="ui-li-heading">Education Sections</h2>
+            </div>
+            <form id='educationForm'>
+              <ul data-role="listview" data-inset="true" id="edu1">
+			  <li data-icon="delete">
+			  <a href="javascript:removeFields('edu1');" style="width:80px">Section 1</a></li>
+			  <li data-icon="false">
+			  <input type="text" data-theme="a" name="institute1" class="required" placeholder="Name of Intitute eg. Teesside University"/>
+              <input type="text" name="degree1" class="required" placeholder="Degree eg. Msc,Bsc" value=""/>
+			  <input type="text" name="subject1" class="required" placeholder="Subject eg. Computing, Criminology" value=""/>  
+			  start:<input type="month" name="start1" id="month-1" value="">End/ecpect to end:<input type="month" name="end1" id="month-2" value="">
+			  <div class="field">
+              <input type="text" id="town" name="town1" placeholder="Town" value=""/>
+              <input type="text" id="county" name="county1" placeholder="County" value=""/>
+              <input type="text" id="country" name="country1" placeholder="Country" value=""/>
+              <input type="hidden" value="1" id ="countEdu"/> 
+              Modlues/Decription:
+              <textarea name="desc1" id="content" style="width: 863px" rows="16"> </textarea>
+              </div>			
+			  </li>
+			  </ul>
+			 <span id="additionalEdu"></span>
+             <span class="msg"></span>
+			  <a class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b" title="Add Another Education Section" href="javascript:addFields('edu')">Add Another</a>            
+              <button>Save & Continue</button>                
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="grid_4" data-theme="a">
+        <div class="gridMarginsLeft">
+          <div class="light-grey">
+			<div data-role="collapsibleset" data-theme="a" data-content-theme="b">
+                <div data-role="collapsible" data-collapsed="false">
+				<h2>Your Analaysis</h2>
+            	<ul data-role="listview" id="requirements" data-theme="a" data-divider-theme="b">											                      					
+				</ul>
+				</div>
+			</div>	
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+<!-- /close page  
+<script src="controllers/class.gotoFunctions.js"></script>-->
+<script src="controllers/class.controller.education.js"></script>

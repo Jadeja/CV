@@ -1,0 +1,81 @@
+<!--SETTINGS-->
+
+  <!-- /panel   
+  
+  <a href="#dashboard" data-direction="reverse" data-role="button" class="ui-btn-left"> BACK</a><spa>&nbsp;</span>-->
+  <!--place your addition header - sections and footer here--> 
+  <!--remember to put in a h1 identifier so you know you have reached the dashboard screen-->
+  
+  <section id="header-workExp" data-role="content" data-theme="a" class="center custom-border page-identifier" style="height:35px;">
+  <a  data-icon="back" accesskey="B" href="#newdashboard" class="backButton ui-btn-left ui-link ui-btn ui-icon-back ui-btn-icon-left ui-shadow ui-corner-all" data-role="button">Back</a>
+  
+    <h3>Work Experience</h3>
+  </section>
+  <section data-role="content" role="main">
+  <div class="container_16" data-theme="a">
+  	<div class="grid_4" data-theme="a">
+        <div class="gridMarginsLeft">
+        <div class="light-grey">
+			<div data-role="collapsibleset" data-theme="a" data-content-theme="b">
+            <div data-role="collapsible" data-theme="a" data-collapsed="false"><h2>Examples</h2>
+            <ul data-role="listview" id="exampleWorkExp" data-theme="a" data-divider-theme="a">
+            </ul></div>
+			</div>
+            </div>
+           <div class="light-grey"> 
+			<div data-role="collapsibleset" data-theme="a" data-content-theme="b">	
+            <div data-role="collapsible" data-theme="a" data-collapsed="false"><h2>Tips and Advices</h2>
+            <ul data-role="listview" id="advisesWorkExp" data-theme="a" data-divider-theme="a">
+            </ul></div>			
+			</div>
+            </div>
+      </div>
+    </div>
+      <div class="grid_8" data-theme="a">
+        <div class="gridMarginsLeft">
+          <div class="light-grey">
+            <div class="header">
+              <h2 class="ui-li-heading">Section 1</h2>
+            </div>
+            <form id='workExpForm'>
+              <ul data-role="listview" data-inset="true" id="workExp1">
+			  <li data-icon="delete">
+			  <a href="javascript:removeFields('workExp1');" style="width:80px">Section 1</a></li>
+			  <li data-icon="false">
+			  <input type="text" data-theme="a" name="organisation" class="required" placeholder="Name of Company/Organisation eg. Microsoft,Dell"/>
+              <input type="text" name="position" class="required" placeholder="Position eg. Junior Developer, Senior Developer" value=""/>
+			  start:<input type="month" name="start" id="month-1" value="">End(leave blank if it is present Job):<input type="month" name="end" id="month-2" value="">
+			  <div class="field">
+              <input type="text" id="town" name="town" placeholder="Town" value=""/>
+              <input type="text" id="county" name="county" placeholder="County" value=""/>    
+              Job Description:
+              <textarea name="desc" id="content" style="width: 863px" rows="16"> </textarea>
+              </div>			
+			  </li>
+			  </ul>
+			 <span id="additionalWorkExp"></span>
+              <span class="msg"></span>
+			  <a class="ui-shadow ui-btn ui-corner-all ui-btn-icon-left ui-icon-plus ui-btn-b" title="Add Another Education Section" href="javascript:addFields('workExp')">Add Another</a><input type="hidden" value="1" id ="countWorkExp"/>             
+              <button>Save & Continue</button>               
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="grid_4" data-theme="a">
+        <div class="gridMarginsLeft">
+          <div class="light-grey">
+			<div data-role="collapsibleset" data-theme="a" data-content-theme="b">
+                <div data-role="collapsible" data-collapsed="false">
+				<h2>Your Analaysis</h2>
+            	<ul data-role="listview" id="requirements2" data-theme="a" data-divider-theme="b">											                      					
+				</ul>
+				</div>
+			</div>	
+          </div>
+        </div>
+      </div>
+    </div>
+   </section>
+<!-- /close page  
+<script src="controllers/class.gotoFunctions.js"></script>-->
+<script src="controllers/class.controller.workExp.js"></script>

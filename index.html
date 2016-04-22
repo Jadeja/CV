@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!--<meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=9" />-->
+<!-- Internet Explorer Compatibility-->
+<!--Not needed for Hybrid Mobile Apps so can be deleted-->
+<!--[if IE 7]><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /><![endif]-->
+<!--[if IE]>
+
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <style type="text/css">
+        .clear {
+            zoom: 1;
+            display: none;
+        }
+    </style>
+<![endif]-->
+
+<title>CV Coach</title>
+
+<!-- JQM Themeroller Stylesheet 
+<script src="config/init.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true"></script> 
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />-->
+<link rel="stylesheet" type="text/css" href="styles/themes/swag.css" />
+<link rel="stylesheet" href="jquery.mobile-1.4.0.css">
+
+<!--jQuery and Mobile Core Minimized-->
+<script src="jquery-1.9.1.min.js"></script>
+<script src="jquery.mobile-1.4.0.min.js"></script>
+
+
+   <script language="javascript" type="text/javascript" src="http://www.polishmywriting.com/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
+
+   <!-- (2) Load the AtD editor plugin -->
+   <script language="javascript" type="text/javascript" src="editor_plugin.js"></script>
+<!-- To Fix Placeholder Issue in Internet Explorer-->
+<!--http://jamesallardice.github.io/Placeholders.js/-->
+<script src="controllers/class.Placeholders.min.js"></script>
+
+<!--Call Controller-->
+<script src="controllers/class.controller.registerUser.js"></script>
+<script src="controllers/class.controller.login.js"></script>
+<!-- <script src="controllers/class.controller.restClient.js"></script>
+<script src="controllers/class.controller.settings.js"></script> -->
+<script src="controllers/class.gotoFunctions.js"></script>
+<script src="controllers/class.controller.logout.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="styles/jquery-mobile-fluid960.css">
+<!--custom CSS must come last to overide CSS defined in the jquery mobile functions-->
+<link rel="stylesheet" type="text/css" href="styles/custom_overides.css" />
+
+<script>
+$(document).ready(function () {
+//Hide Elements
+var $content = $("#registerUser").hide();
+var $content = $("#about-app").hide();
+   
+//Make Elements visible on click     
+$(".toggle").on("click", function (e) {
+        $(this).toggleClass("expanded");
+        $(this).next().slideToggle();
+});
+});
+
+</script>
+
+
+
+   
+   
+</head>
+
+<body>
+<div data-role="page" id="home" class="type-index ui-page ui-body-c ui-page-active" style="min-height: 995px;">
+<div id="formContainer">
+      <div id="formContent">
+        <div class="header">
+          <h2>CV Builder</h2>
+        </div>
+        <form id='loginForm'>
+          <div class="field">
+            <input name="email" id="loginEmail" type="text" placeholder="Your Email Address" />
+          </div>
+          <div class="field">
+            <input name="PassWord" id="loginPassWord" type="password" placeholder="Your Password" />
+          </div>
+          <div id="login-btn">
+            <button>Login</button>
+          </div>
+          <span id="msg"> </span>
+        </form>
+        
+         <div class="toggle"><a href="#">
+        <span class="image"></span><span class="text">Register Form</span></a></div>
+        
+        <form class="bob" id='registerUser'>
+          <label for="firstN"></label>
+          <div class="field">
+            <input name="firstN" id="firstN" type="text" placeholder="Your First Name" />
+          </div>
+          <label for="lastN"></label>
+          <div class="field">
+            <input name="lastN" id="lastN" type="text" placeholder="Your Last Name" />
+          </div>
+          <label for="email"></label>
+          <div class="field">
+            <input name="email" id="email" type="text" placeholder="example@yahoo.com" />
+          </div>
+          <label for="PassWord"></label>
+          <div class="field">
+            <input name="PassWord" id="PassWord" type="password" placeholder="Enter Your Password" />
+          </div>
+          <button id="reg">Register Account</button>
+          <span class="msg"></span>
+        </form>
+        <div class="toggle"><a href="#">
+        <span class="info"></span><span class="text">About</span></a></div>
+        <div id="about-app">
+          <h2 class="title">About the app</h2>
+          <hr class="line">
+          <p> CV Coach application will help students to create CV.</p>
+          <h2 class="title">How to use the Website</h2>
+          <hr class="line">
+          <p> In order to use the 'CV Coach' Web application you will need to register an account. It's all free just type your details using the register form make sure you haven't created an account for our Web Application before as you will be unable to register with same email address which has already been used. Next these are very few very important steps to create your CV. 1) Analysis Job Requirements 2) After that personal information section followed by personal statement, education section and work experience section.</p>
+        </div>
+        
+      </div>   
+</div><!--Close formContainer-->
+
+</div><!-- /close page -->
+
+
+</body>
+</html>

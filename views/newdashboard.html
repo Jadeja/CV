@@ -1,0 +1,122 @@
+<!--DASHBOARD -->
+
+  <!--Account Control Panel --> 
+ 
+  
+  <a href="#accountPanel" data-role="none" data-enhance="false" class="ui-btn-left"><span class="ui-icon-settings"></span></a> 
+  
+   <!--Note about panel element - had to change from <panel> to <div> to ensure compatibility with IE8 and IE7. May need to switch back to <panel> for app production-->
+  <div data-role="panel" id="accountPanel" data-position="left" data-display="overlay">
+    <header data-role="header" data-theme="a" class="center">Account Settings</header>
+    <ul data-role="listview" data-inset="true" data-theme="a" data-icon="star" data-filter-placeholder="Search..." class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+     <li><a href="javascript:getPage('accessibility')" accesskey="A" data-role="none">Accessibility</a></li>
+   	 <li><a href="javascript:logout()" accesskey="L" data-role="none">Log Out</a></li>          
+    </ul>
+  </div>
+  <!-- /panel -->
+  
+  <a href="javascript:logout()" accesskey="L" class="ui-btn-right ui-link ui-btn ui-icon-power ui-btn-icon-left ui-shadow ui-corner-all">Logout</a>
+  <!--PAGE 2 - DASHBOARD -->
+
+  <!--place your addition header - sections and footer here--> 
+  <!--remember to put in a h1 identifier so you know you have reached the dashboard screen-->
+  <section id="header-newdashboard" data-role="content" data-theme="a" class="center custom-border page-identifier">
+    <h4>Dashboard</h4>
+  </section>
+  <div id="wrapper"> 
+    
+    <!--Main Content in Center of Screen-->
+    <section data-role="content" class="constrain contentBG"> 
+      
+      <!--960 Grid Root [responsive web design plugin]-->
+      <div class="container_16" data-theme="a">
+        <div class="grid_8" data-theme="a" id="update">
+          <div class="gridMarginsLeft"> 
+            <!--Close Left Column 1 --> 
+            
+            <!--Left Column Group 2-->
+            <div data-role="listview" data-inset="true" data-theme="a" data-icon="false" data-filter-placeholder="Search..." class="jqm-list jqm-home-list ui-listview ui-listview-inset ui-corner-all ui-shadow">             
+             
+                <div class="header">
+                  <h2>Web Information</h2>
+                </div>
+				<div data-role="content" class="ui-content" role="main">
+                <ul data-role="listview" data-inset="true">
+				<li data-role="list-divider" role="heading">Analysis Section</li>
+                 <li><a href="javascript:getPage('analyse')" accesskey="C">Create New CV for New Job</a></li>    			        				 
+                 </ul> 
+              </div>
+			  
+			    <h2>External Support</h2>            
+				<div data-role="content" class="ui-content" role="main">
+                <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                 	<li><a data-role="none">Career Service</a></li>                        		 		
+                 </ul> 
+              </div>
+			  
+            </div>
+            <!--Close Left Column 2 --> 
+          </div>
+          <!--Close grid_8--> 
+        </div>
+        <!--Close container_16--> 
+        
+        <!--Right Column Group 1-->
+        <div class="grid_8" data-theme="a">
+          <div class="gridMarginsRight"> 
+            <!--Right Column Group 1-->
+            <div data-role="listview" data-inset="true" data-theme="a" data-icon="star" class="mylist jqm-list jqm-home-list ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                 <div class="header">
+                  <h2>CV Sections</h2>
+                </div>       
+                <div data-role="content" class="ui-content" role="main">
+  				 <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+					<li data-role="list-divider" role="heading">Title</li>
+                 	<li><a href="javascript:getPage('personalInfo')" accesskey="I">Personal Information</a></li> 
+                    <li><a href="javascript:getPage('personalStatement')" accesskey="S">Personal Statement</a></li>      
+		 			<li><a href="javascript:getPage('education')" accesskey="E">Education/Qualification</a></li> 
+					<li><a href="javascript:getPage('workExp')" accesskey="W">Work Experience</a></li> 
+                    <li class="ui-disabled"><a>Voluntary Experience</a></li>      
+		 			<li class="ui-disabled"><a>Placement Experience</a></li> 
+					<li class="ui-disabled"><a>Other Experience</a></li> 
+                    <li class="ui-disabled"><a>Key/Software/IT Skills</a></li>      
+		 			<li class="ui-disabled"><a>University/Freelance Projects</a></li> 
+					<li class="ui-disabled"><a>Achievements</a></li> 
+                    <li class="ui-disabled"><a>Hobbies/Personal Interests</a></li>      
+		 			<li class="ui-disabled"><a>References</a></li>                      
+                 </ul> 
+                  <ul data-role="listview" data-inset="true" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+                 <li data-icon="false" class="dwn">
+                    <a href="http://localhost/CVCoach/models/class.model.download.php?action=download" target="_blank" class="ui-btn-left ui-link ui-btn ui-icon-arrow-d ui-btn-icon-left ui-shadow ui-corner-all">download</a></li> 
+                    </ul>
+    </div>          
+            </div>
+            <!--Close Right Column 1 --> 
+          </div>
+        </div>
+        <!--Close grid_8--> 
+        
+        <!--Spare Group--> 
+        
+      </div>     
+    </section>
+    <!--Close Section-->  
+  </div>
+
+<!-- /close page --> 
+
+<!--PAGE 4 - map-page -->
+<div data-role="page" id="map-page" data-add-back-btn="true"> 
+  
+  
+  <div id="map" data-role="content"> </div>
+</div>
+
+  
+<script type="application/javascript">
+function download()
+{
+	$.get("http://localhost/CVCoach/models/class.model.download.php?action=download");
+
+}
+</script>

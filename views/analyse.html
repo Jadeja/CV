@@ -1,0 +1,52 @@
+<!--SETTINGS-->
+
+  <!-- /panel   
+  
+  <a href="#dashboard" data-direction="reverse" data-role="button" class="ui-btn-left"> BACK</a><spa>&nbsp;</span>-->
+  <!--place your addition header - sections and footer here--> 
+  <!--remember to put in a h1 identifier so you know you have reached the dashboard screen-->
+  
+  <section id="header-analyse" data-role="content" data-theme="a" class="center custom-border page-identifier" style="height:35px;">
+  <a  data-icon="back" accesskey="B" href="javascript:getPage('newdashboard')" class="backButton ui-btn-left ui-link ui-btn ui-icon-back ui-btn-icon-left ui-shadow ui-corner-all" data-role="button">Back</a>
+  
+    <h3>Analysis of Job requirements</h3>
+  </section>
+  <section class="smallForm" data-role="content" role="main">
+  <div id="wrapper">     
+    <!--Main Content in Center of Screen-->
+   <div data-role="content" class="ui-content">
+		<form id="analyseForm">		
+		<div id="analyseAdvise">
+			<h2>Lets Start with some simple questions.</h2>
+		</div>
+		<div id="analyseArea">
+			<select name="stream" id="streamSelect">
+				<option value="null">Please Select Your Stream Here</option>  
+				<option value="computing">Computing</option> 
+				<option value="criminology">Criminology</option> 
+				<option value="healthCare">Health Care</option> 				
+			</select>
+           <!-- <input type="text" data-theme="a" class="required" name="cvTitle" placeholder="eg. PHP JOB CV"/> -->
+			<span id="msg"> </span>
+			<div id="subAnalyseArea">
+			</div>
+					
+		</div>			
+		<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+		<div data-role="header" data-theme="a">
+		<h1>Next Step</h1>
+			</div>
+			<div role="main" class="ui-content">
+        <h3 class="ui-title" id="analysisStep1"></h3>				
+				<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">OK</a>    
+				
+			</div>
+		</div>
+				
+		</form>
+    </div>	
+	</div>
+   </section>
+<!-- /close page --> 
+<script src="controllers/class.controller.analyse.js"></script>
+<script src="controllers/class.gotoFunctions.js"></script>
